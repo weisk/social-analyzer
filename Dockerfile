@@ -1,8 +1,9 @@
-FROM node:latest
-RUN apt-get update && apt-get install -y firefox-esr tesseract-ocr
+FROM node:14.15.3-alpine3.12
 WORKDIR /usr/src/app
-COPY package*.json ./
-RUN npm install lodash
-RUN npm install
 COPY . .
-CMD [ "npm", "start" ]
+RUN apk update && \
+  apk add --no-cache firefox-esr && \
+  npm install lodash && \
+  npm install --loglevel=error
+EXPOSE 9005
+ENTRYPOINT [ "npm", "start", "--","--docker"]

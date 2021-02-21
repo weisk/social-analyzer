@@ -1,20 +1,15 @@
 <p align="center"> <img src="https://raw.githubusercontent.com/qeeqbox/social-analyzer/main/readme/socialanalyzerlogo_.png"></p>
 
 #
-[![Generic badge](https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/qeeqbox/social-analyzer/main/info&label=version&query=$.version&colorB=blue&style=flat-square)](https://github.com/qeeqbox/social-analyzer/blob/main/info) [![Generic badge](https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/qeeqbox/social-analyzer/main/info&label=build&query=$.build&colorB=green&style=flat-square)](https://github.com/qeeqbox/social-analyzer/blob/main/info) [![Generic badge](https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/qeeqbox/social-analyzer/main/info&label=test&query=$.test&colorB=green&style=flat-square)](https://github.com/qeeqbox/social-analyzer/blob/main/info) [![Generic badge](https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/qeeqbox/social-analyzer/main/info&label=verified%20sites&query=$.websites&colorB=blue&style=flat-square)](https://github.com/qeeqbox/social-analyzer/blob/main/info) [![Generic badge](https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/qeeqbox/social-analyzer/main/info&label=verified%20detections&query=$.detections&colorB=blue&style=flat-square)](https://github.com/qeeqbox/social-analyzer/blob/main/info) [![Generic badge](https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/qeeqbox/social-analyzer/main/info&label=special%20detections&query=$.special&colorB=blue&style=flat-square)](https://github.com/qeeqbox/social-analyzer/blob/main/info) [![Generic badge](https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/qeeqbox/social-analyzer/main/info&label=awaiting%20verification&query=$.awaiting_verification&colorB=orange&style=flat-square)](https://github.com/qeeqbox/social-analyzer/blob/main/info) [![Generic badge](https://img.shields.io/static/v1?label=%F0%9F%91%8D&message=!&color=yellow&style=flat-square)](https://github.com/qeeqbox/social-analyzer/stargazers)
+[![Generic badge](https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/qeeqbox/social-analyzer/main/info&label=version&query=$.version&colorB=blue&style=flat-square)](https://github.com/qeeqbox/social-analyzer/blob/main/info) [![Generic badge](https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/qeeqbox/social-analyzer/main/info&label=verified%20sites&query=$.websites&colorB=blue&style=flat-square)](https://github.com/qeeqbox/social-analyzer/blob/main/info) [![Generic badge](https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/qeeqbox/social-analyzer/main/info&label=verified%20detections&query=$.detections&colorB=blue&style=flat-square)](https://github.com/qeeqbox/social-analyzer/blob/main/info) [![Generic badge](https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/qeeqbox/social-analyzer/main/info&label=build&query=$.build&colorB=green&style=flat-square)](https://github.com/qeeqbox/social-analyzer/blob/main/info) [![Generic badge](https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/qeeqbox/social-analyzer/main/info&label=test&query=$.test&colorB=green&style=flat-square)](https://github.com/qeeqbox/social-analyzer/blob/main/info) [![Generic badge](https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/qeeqbox/social-analyzer/main/info&label=docker&query=$.docker&colorB=green&style=flat-square)](https://github.com/qeeqbox/social-analyzer/blob/main/info) [![Generic badge](https://img.shields.io/static/v1?label=%F0%9F%91%8D&message=!&color=yellow&style=flat-square)](https://github.com/qeeqbox/social-analyzer/stargazers)
 
-API and Web App for analyzing & finding a person profile across +300 social media websites. It includes different string analysis and detection modules, you can choose which combination of modules to use during the investigation. The detection modules utilize a rating mechanism based on different detection techniques, which produces a rate value that starts from 0 to 100 (No-Maybe-Yes)
+Social Analyzer - API, CLI & Web App for analyzing & finding a person's profile across +300 social media websites. It includes different string analysis and detection modules, you can choose which combination of modules to use during the investigation process.
 
-I have been getting requests from all over the place asking me to add a python CLI (I'm working on it) 👍👍👍
+The detection modules utilize a rating mechanism based on different detection techniques, which produces a rate value that starts from 0 to 100 (No-Maybe-Yes). This module intended to have less false positive and it's documented in this [Wiki](https://github.com/qeeqbox/social-analyzer/wiki) link
 
-**Please submit your contribution in a Pull Request!**
+The analysis and extracted social media information from this OSINT tool could help in investigating profiles related to suspicious or malicious activities such as [cyberbullying](https://en.wikipedia.org/wiki/Wikipedia:Cyberbullying), [cybergrooming](https://de.wikipedia.org/wiki/Cyber-Grooming), [cyberstalking](https://en.wikipedia.org/wiki/Cyberstalking), and [spreading misinformation](https://en.wikipedia.org/wiki/Misinformation).
 
-## Updates
-- (New) Added a small CLI (You can use this project from Command Line, but it's limited to FindUserProflesFast option) 👏
-- Added an optional timeout and implicit wait for each detection (Some websites have a delay logic implemented in the backend)
-- Added logs (user request)
-- Added 5 seconds timeout to https.get (user request)
-- Added the API documentation [WiKi](https://github.com/qeeqbox/social-analyzer/wiki)
+This project is *"currently used by some law enforcement agencies in countries where resources are limited"*.
 
 ## Security Testing
 
@@ -40,53 +35,83 @@ Profile images **will not** be blurred. If you want them to be blurred, turn tha
 <img src="https://raw.githubusercontent.com/qeeqbox/social-analyzer/main/readme/cli.gif" style="max-width:768px"/>
 
 ## Features
-- String Analysis
-- Search Engine Lookup
-- Multi Layers detections
-- Most Common Names & Words
-- Convert Numbers to Letters
-- Find Profles Normal (Fast)
-- Find Profles Advacned (Slow)
-- Find Profles Special (Slow)
-- Profile Screenshot
-- And more!
+- String & name analysis
+- Find profile using multiple techniques (HTTPS library & Webdriver)
+- Multi layers detections (OCR, normal, advanced & special)
+- Search engine lookup (Google API - optional)
+- Custom search queries (Google API & DuckDuckGo API - optional)
+- Profile screenshot, title, info and website description
+- Find name origins, name similarity & common words by language
+- Custom user-agent, proxy, timeout & implicit wait
+- Python CLI & NodeJS CLI (limited to FindUserProfilesFast option)
+- Grid option for faster checking (limited to docker-compose)
+- Dump logs to folder or terminal (prettified)
+- Adjust finding\getting profile workers (default 15)
+- Re-checking option for failed profiles
+- [Wiki](https://github.com/qeeqbox/social-analyzer/wiki)
 
 ## Special Detections
-- facebook
+- Facebook (Phone number, name or profile name)
+- Gmail (example@gmail.com)
+- Google (example@example.com)
 
-## Install and run as web app (Nodejs + NPM + Firefox)
+## Install and run as Python CLI (Windows, Linux, MacOS, Raspberry pi..)
+```bash
+pip install social-analyzer
+# You can also scan all websites using --websites "all"
+python -m social-analyzer --cli --mode "fast" --username "johndoe" --websites "youtube pinterest tumblr" --output "pretty"
+```
+
+## Install and run as NodeJS Web App (Linux + NodeJS + NPM + Firefox)
 ```bash
 sudo add-apt-repository ppa:mozillateam/ppa
 sudo apt-get update
 sudo apt-get install -y firefox-esr tesseract-ocr git
 git clone https://github.com/qeeqbox/social-analyzer.git
 cd social-analyzer
-rm -rf package-lock.json node_modules
 npm install lodash
 npm install
 npm start
 ```
 
-## Install and run as cli (Nodejs + NPM + Firefox)
+## Install and run as NodeJS Web App (Windows + NodeJS + NPM + Firefox)
+```bash
+Download & Install firefox esr (Extended Support Release) from https://www.mozilla.org/en-US/firefox/enterprise/#download
+Download & Install https://nodejs.org/en/download/
+Download & Extract https://github.com/qeeqbox/social-analyzer/archive/main.zip
+cd social-analyzer
+npm install lodash
+npm install
+npm start
+```
+
+## Install and run as NodeJS CLI (Linux + NodeJS + NPM + Firefox)
 ```bash
 sudo add-apt-repository ppa:mozillateam/ppa
 sudo apt-get update
 sudo apt-get install -y firefox-esr tesseract-ocr git
 git clone https://github.com/qeeqbox/social-analyzer.git
 cd social-analyzer
-rm -rf package-lock.json node_modules
 npm install lodash
 npm install
-# If you want to list all websites use node app.js -c -l
-# Remember the following runs as FindUserProflesFast
-node app.js -c -u "username" -w "youtube pinterest tumblr"
+# If you want to list all websites use node app.js --cli --list
+# Remember the following runs as FindUserProfilesFast
+# You can also scan all websites using --websites "all"
+node app.js --cli --mode "fast" --username "johndoe" --websites "youtube pinterest tumblr" --output "pretty"
 ```
 
-## Install and run as web app (docker)
+## Install and run as NodeJS Web App with a grid (docker-compose)
 ```bash
 git clone https://github.com/qeeqbox/social-analyzer.git
 cd social-analyzer
-sudo docker build -t social-analyzer . && sudo docker run -p 9005:9005 -it social-analyzer
+docker-compose -f docker-compose.yml up --build
+```
+
+## Install and run as NodeJS Web App (docker)
+```bash
+git clone https://github.com/qeeqbox/social-analyzer.git
+cd social-analyzer
+docker build -t social-analyzer . && docker run -p 9005:9005 -it social-analyzer
 ```
 
 ## Running Issues
@@ -103,9 +128,13 @@ sudo kill -9 $(sudo lsof -t -i:9005)
 - Adding the generic websites detections (These need some reviewing, but I will try to add them in 2021)
 
 ## Resources
-- api.duckduckgo, google api, nodejs, bootstrap, selectize, jquery and font-awesome
-- Let me know if i missed a reference or resource!
+- DuckDuckGo API, Google API, NodeJS, bootstrap, selectize, jQuery, Wikipedia, font-awesome, selenium-webdriver & tesseract.js
+- Let me know if I missed a reference or resource!
+
+## Interviews
+[Console 37](https://console.substack.com/p/console-37)
 
 ## Disclaimer\Notes
+- Make sure to download this tool from GitHub - (ONLY) ⚠️
+- If you want your website to be excluded from this project, please reach out
 - This tool meant to be used locally (It does not have any type of Access Control)
-- If you want your website to be excluded from this project, please reach out to me!
